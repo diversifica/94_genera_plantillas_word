@@ -8,7 +8,12 @@
     "updated_at": "2026-01-01T00:00:00+01:00",
     "author": "Antonio",
     "description": "Perfil golden sample para validar el motor OpenXML.",
-    "tags": ["golden", "poc", "a4", "es-ES"]
+    "tags": [
+      "golden",
+      "poc",
+      "a4",
+      "es-ES"
+    ]
   },
   "document": {
     "page_size": "A4",
@@ -29,15 +34,24 @@
   "fonts": {
     "body": {
       "font_name": "Calibri",
-      "fallback_fonts": ["Arial", "Liberation Sans"]
+      "fallback_fonts": [
+        "Arial",
+        "Liberation Sans"
+      ]
     },
     "headings": {
       "font_name": "Calibri",
-      "fallback_fonts": ["Arial", "Liberation Sans"]
+      "fallback_fonts": [
+        "Arial",
+        "Liberation Sans"
+      ]
     },
     "monospace": {
       "font_name": "Consolas",
-      "fallback_fonts": ["Courier New", "Liberation Mono"]
+      "fallback_fonts": [
+        "Courier New",
+        "Liberation Mono"
+      ]
     }
   },
   "styles": {
@@ -59,7 +73,10 @@
             "alignment": "justify",
             "spacing_before_twips": 0,
             "spacing_after_twips": 120,
-            "line_spacing": { "type": "multiple", "value": 1.15 }
+            "line_spacing": {
+              "type": "multiple",
+              "value": 1.15
+            }
           },
           "pagination": {
             "widow_control": true
@@ -67,7 +84,7 @@
         }
       },
       {
-        "style_id": "Title1",
+        "style_id": "Heading1",
         "style_name": "Título 1",
         "type": "paragraph",
         "based_on": "Normal",
@@ -81,7 +98,10 @@
             "alignment": "left",
             "spacing_before_twips": 480,
             "spacing_after_twips": 240,
-            "line_spacing": { "type": "multiple", "value": 1.0 },
+            "line_spacing": {
+              "type": "multiple",
+              "value": 1.0
+            },
             "outline_level": 0
           },
           "pagination": {
@@ -91,7 +111,7 @@
         }
       },
       {
-        "style_id": "Title2",
+        "style_id": "Heading2",
         "style_name": "Título 2",
         "type": "paragraph",
         "based_on": "Normal",
@@ -105,7 +125,10 @@
             "alignment": "left",
             "spacing_before_twips": 360,
             "spacing_after_twips": 180,
-            "line_spacing": { "type": "multiple", "value": 1.0 },
+            "line_spacing": {
+              "type": "multiple",
+              "value": 1.0
+            },
             "outline_level": 1
           },
           "pagination": {
@@ -114,7 +137,7 @@
         }
       },
       {
-        "style_id": "Title3",
+        "style_id": "Heading3",
         "style_name": "Título 3",
         "type": "paragraph",
         "based_on": "Normal",
@@ -128,7 +151,10 @@
             "alignment": "left",
             "spacing_before_twips": 240,
             "spacing_after_twips": 120,
-            "line_spacing": { "type": "multiple", "value": 1.0 },
+            "line_spacing": {
+              "type": "multiple",
+              "value": 1.0
+            },
             "outline_level": 2
           },
           "pagination": {
@@ -148,10 +174,16 @@
           },
           "paragraph": {
             "alignment": "left",
-            "indentation": { "left_twips": 720, "hanging_twips": 360 },
+            "indentation": {
+              "left_twips": 720,
+              "hanging_twips": 360
+            },
             "spacing_before_twips": 0,
             "spacing_after_twips": 120,
-            "line_spacing": { "type": "multiple", "value": 1.15 }
+            "line_spacing": {
+              "type": "multiple",
+              "value": 1.15
+            }
           }
         }
       },
@@ -167,10 +199,16 @@
           },
           "paragraph": {
             "alignment": "left",
-            "indentation": { "left_twips": 720, "hanging_twips": 360 },
+            "indentation": {
+              "left_twips": 720,
+              "hanging_twips": 360
+            },
             "spacing_before_twips": 0,
             "spacing_after_twips": 120,
-            "line_spacing": { "type": "multiple", "value": 1.15 }
+            "line_spacing": {
+              "type": "multiple",
+              "value": 1.15
+            }
           }
         }
       },
@@ -187,10 +225,16 @@
           },
           "paragraph": {
             "alignment": "left",
-            "indentation": { "left_twips": 720, "right_twips": 360 },
+            "indentation": {
+              "left_twips": 720,
+              "right_twips": 360
+            },
             "spacing_before_twips": 120,
             "spacing_after_twips": 120,
-            "line_spacing": { "type": "multiple", "value": 1.15 }
+            "line_spacing": {
+              "type": "multiple",
+              "value": 1.15
+            }
           }
         }
       },
@@ -207,10 +251,15 @@
           },
           "paragraph": {
             "alignment": "left",
-            "indentation": { "left_twips": 360 },
+            "indentation": {
+              "left_twips": 360
+            },
             "spacing_before_twips": 120,
             "spacing_after_twips": 120,
-            "line_spacing": { "type": "multiple", "value": 1.15 }
+            "line_spacing": {
+              "type": "multiple",
+              "value": 1.15
+            }
           }
         }
       },
@@ -226,10 +275,15 @@
           },
           "paragraph": {
             "alignment": "left",
-            "indentation": { "left_twips": 360 },
+            "indentation": {
+              "left_twips": 360
+            },
             "spacing_before_twips": 120,
             "spacing_after_twips": 120,
-            "line_spacing": { "type": "multiple", "value": 1.15 }
+            "line_spacing": {
+              "type": "multiple",
+              "value": 1.15
+            }
           }
         }
       },
@@ -245,10 +299,15 @@
           },
           "paragraph": {
             "alignment": "left",
-            "indentation": { "left_twips": 360 },
+            "indentation": {
+              "left_twips": 360
+            },
             "spacing_before_twips": 120,
             "spacing_after_twips": 120,
-            "line_spacing": { "type": "multiple", "value": 1.0 }
+            "line_spacing": {
+              "type": "multiple",
+              "value": 1.0
+            }
           }
         }
       },
@@ -267,7 +326,10 @@
             "alignment": "center",
             "spacing_before_twips": 120,
             "spacing_after_twips": 240,
-            "line_spacing": { "type": "multiple", "value": 1.0 }
+            "line_spacing": {
+              "type": "multiple",
+              "value": 1.0
+            }
           }
         }
       }
@@ -277,25 +339,36 @@
         "style_id": "Emphasis",
         "style_name": "Énfasis",
         "type": "character",
-        "run": { "font_role": "body", "italic": true }
+        "run": {
+          "font_role": "body",
+          "italic": true
+        }
       },
       {
         "style_id": "StrongEmphasis",
         "style_name": "Énfasis fuerte",
         "type": "character",
-        "run": { "font_role": "body", "bold": true }
+        "run": {
+          "font_role": "body",
+          "bold": true
+        }
       },
       {
         "style_id": "Term",
         "style_name": "Término",
         "type": "character",
-        "run": { "font_role": "body", "bold": true }
+        "run": {
+          "font_role": "body",
+          "bold": true
+        }
       },
       {
         "style_id": "InlineCode",
         "style_name": "Código en línea",
         "type": "character",
-        "run": { "font_role": "monospace" }
+        "run": {
+          "font_role": "monospace"
+        }
       }
     ]
   },
@@ -309,27 +382,45 @@
           "number_format": "decimal",
           "level_text_pattern": "%1.",
           "start_at": 1,
-          "indentation": { "left_twips": 0, "hanging_twips": 360 }
+          "indentation": {
+            "left_twips": 0,
+            "hanging_twips": 360
+          }
         },
         {
           "level_index": 1,
           "number_format": "decimal",
           "level_text_pattern": "%1.%2.",
           "start_at": 1,
-          "indentation": { "left_twips": 360, "hanging_twips": 360 }
+          "indentation": {
+            "left_twips": 360,
+            "hanging_twips": 360
+          }
         },
         {
           "level_index": 2,
           "number_format": "decimal",
           "level_text_pattern": "%1.%2.%3.",
           "start_at": 1,
-          "indentation": { "left_twips": 720, "hanging_twips": 360 }
+          "indentation": {
+            "left_twips": 720,
+            "hanging_twips": 360
+          }
         }
       ],
       "style_bindings": [
-        { "level_index": 0, "style_id": "Title1" },
-        { "level_index": 1, "style_id": "Title2" },
-        { "level_index": 2, "style_id": "Title3" }
+        {
+          "level_index": 0,
+          "style_id": "Heading1"
+        },
+        {
+          "level_index": 1,
+          "style_id": "Heading2"
+        },
+        {
+          "level_index": 2,
+          "style_id": "Heading3"
+        }
       ]
     },
     "list_numbering": {
@@ -338,7 +429,10 @@
           "scheme_id": "ListDecimal",
           "level_index": 0,
           "restart_behavior": "restart_on_style",
-          "indentation": { "left_twips": 720, "hanging_twips": 360 }
+          "indentation": {
+            "left_twips": 720,
+            "hanging_twips": 360
+          }
         }
       ],
       "bullet_lists": [
@@ -346,7 +440,10 @@
           "scheme_id": "ListBullet",
           "level_index": 0,
           "restart_behavior": "continue",
-          "indentation": { "left_twips": 720, "hanging_twips": 360 }
+          "indentation": {
+            "left_twips": 720,
+            "hanging_twips": 360
+          }
         }
       ]
     }
@@ -356,25 +453,35 @@
       {
         "section_id": "S_COVER",
         "type": "cover",
-        "page_numbering": { "mode": "none" },
+        "page_numbering": {
+          "mode": "none"
+        },
         "different_first_page": true
       },
       {
         "section_id": "S_TOC",
         "type": "toc",
-        "page_numbering": { "mode": "roman", "start_at": 1 },
+        "page_numbering": {
+          "mode": "roman",
+          "start_at": 1
+        },
         "different_first_page": true
       },
       {
         "section_id": "S_BODY",
         "type": "body",
-        "page_numbering": { "mode": "arabic", "start_at": 1 },
+        "page_numbering": {
+          "mode": "arabic",
+          "start_at": 1
+        },
         "different_first_page": false
       },
       {
         "section_id": "S_ANNEX",
         "type": "annexes",
-        "page_numbering": { "mode": "arabic" },
+        "page_numbering": {
+          "mode": "arabic"
+        },
         "different_first_page": false
       }
     ]
@@ -383,8 +490,14 @@
     "items": [
       {
         "section_id": "S_COVER",
-        "header": { "text_center": "", "include_page_number": false },
-        "footer": { "text_center": "", "include_page_number": false }
+        "header": {
+          "text_center": "",
+          "include_page_number": false
+        },
+        "footer": {
+          "text_center": "",
+          "include_page_number": false
+        }
       },
       {
         "section_id": "S_TOC",
@@ -433,9 +546,18 @@
     "include_annexes": true,
     "toc_title": "Índice",
     "style_mapping": [
-      { "outline_level": 0, "style_id": "Title1" },
-      { "outline_level": 1, "style_id": "Title2" },
-      { "outline_level": 2, "style_id": "Title3" }
+      {
+        "outline_level": 0,
+        "style_id": "Heading1"
+      },
+      {
+        "outline_level": 1,
+        "style_id": "Heading2"
+      },
+      {
+        "outline_level": 2,
+        "style_id": "Heading3"
+      }
     ]
   },
   "assets": {
