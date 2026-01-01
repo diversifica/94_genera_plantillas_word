@@ -1,13 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "YArvTyozkx0=",
+  "dgSpecHash": "Ep1ETUa2+90=",
   "success": true,
   "projectFilePath": "E:\\94_genera_plantillas_word\\src\\TemplateGen.Core\\TemplateGen.Core.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\diver\\.nuget\\packages\\documentformat.openxml\\3.3.0\\documentformat.openxml.3.3.0.nupkg.sha512",
+    "C:\\Users\\diver\\.nuget\\packages\\documentformat.openxml.framework\\3.3.0\\documentformat.openxml.framework.3.3.0.nupkg.sha512",
     "C:\\Users\\diver\\.nuget\\packages\\humanizer.core\\3.0.1\\humanizer.core.3.0.1.nupkg.sha512",
     "C:\\Users\\diver\\.nuget\\packages\\json.more.net\\2.2.0\\json.more.net.2.2.0.nupkg.sha512",
     "C:\\Users\\diver\\.nuget\\packages\\jsonpointer.net\\6.0.1\\jsonpointer.net.6.0.1.nupkg.sha512",
-    "C:\\Users\\diver\\.nuget\\packages\\jsonschema.net\\8.0.5\\jsonschema.net.8.0.5.nupkg.sha512"
+    "C:\\Users\\diver\\.nuget\\packages\\jsonschema.net\\8.0.5\\jsonschema.net.8.0.5.nupkg.sha512",
+    "C:\\Users\\diver\\.nuget\\packages\\system.io.packaging\\8.0.1\\system.io.packaging.8.0.1.nupkg.sha512"
   ],
   "logs": []
 }

@@ -115,6 +115,15 @@ class Program
                 
                 await File.WriteAllTextAsync(reportPath, System.Text.Json.JsonSerializer.Serialize(report, new System.Text.Json.JsonSerializerOptions { WriteIndented = true }));
                 Console.WriteLine($"Report generated: {reportPath}");
+
+                if (!hasErrors)
+                {
+                    Console.WriteLine("Generating Word Document...");
+                    var generator = new WordGeneratorService();
+                    var docPath = Path.Combine(outputDir.FullName, "GeneratedDocument.docx");
+                    generator.Generate(profile, docPath);
+                    Console.WriteLine($"Document created successfully: {docPath}");
+                }
             }
 
             if (strict && hasErrors)

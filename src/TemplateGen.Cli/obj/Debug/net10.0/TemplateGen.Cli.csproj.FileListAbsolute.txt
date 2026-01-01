@@ -35,3 +35,6 @@ E:\94_genera_plantillas_word\src\TemplateGen.Cli\bin\Debug\net10.0\Humanizer.dll
 E:\94_genera_plantillas_word\src\TemplateGen.Cli\bin\Debug\net10.0\Json.More.dll
 E:\94_genera_plantillas_word\src\TemplateGen.Cli\bin\Debug\net10.0\JsonPointer.Net.dll
 E:\94_genera_plantillas_word\src\TemplateGen.Cli\bin\Debug\net10.0\JsonSchema.Net.dll
+E:\94_genera_plantillas_word\src\TemplateGen.Cli\bin\Debug\net10.0\DocumentFormat.OpenXml.dll
+E:\94_genera_plantillas_word\src\TemplateGen.Cli\bin\Debug\net10.0\DocumentFormat.OpenXml.Framework.dll
+E:\94_genera_plantillas_word\src\TemplateGen.Cli\bin\Debug\net10.0\System.IO.Packaging.dll
