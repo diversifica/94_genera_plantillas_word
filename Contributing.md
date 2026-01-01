@@ -136,6 +136,18 @@ Reglas obligatorias:
 - Toda fusión a `develop` se realiza mediante Pull Request.
 - El paso de `develop` a `main` representa un **hito estable del proyecto**.
 
+### 5.2.1 Regla de Oro del Flujo de Trabajo (Strict Workflow Enforcement)
+
+Para garantizar el determinismo y la trazabilidad, se debe seguir estrictamente este orden **sin excepciones**:
+
+1.  **Issue**: No se escribe código sin una Issue abierta que lo describa.
+2.  **Rama**: Se crea una rama desde `develop` (e.g., `feature/xyz`, `fix/abc`) asociada a la Issue.
+3.  **Implementación**: Se codifica y se realizan commits en la rama.
+4.  **Test**: Se verifica localmente (Unit Tests + Manual).
+5.  **Pull Request**: Se abre un PR hacia `develop` referenciando la Issue (e.g., `Closes #N`).
+6.  **Revisión y Merge**: Se revisa y se fusiona a `develop`. **Nunca se hace commit directo a `develop` o `main`**.
+7.  **Siguiente Fase**: Solo tras el merge se procede a la siguiente fase o tarea.
+
 ---
 
 ### 5.3 Gestión de issues por fase
