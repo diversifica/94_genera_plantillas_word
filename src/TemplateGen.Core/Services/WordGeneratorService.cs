@@ -19,7 +19,7 @@ public class WordGeneratorService
         _logger = logger ?? NullLogger<WordGeneratorService>.Instance;
     }
 
-    public void Generate(TemplateProfile profile, string outputPath, DocumentContent? content = null)
+    public void Generate(TemplateProfile profile, string outputPath, DocumentContent? content = null, bool includeToc = false)
     {
         _logger.LogInformation("Starting template generation for output: {OutputPath}", outputPath);
         if (profile == null) throw new ArgumentNullException(nameof(profile));
