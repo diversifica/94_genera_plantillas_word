@@ -52,7 +52,7 @@ public class NumberingDefinitionsGenerator
                 foreach (var listConfig in config.ListNumbering.NumberedLists)
                 {
                      sb.Append(CreateListAbstractNumXml(listConfig, abstractNumIdCounter, true));
-                     sb.Append($@"<w:num w:numId=""{abstractNumIdCounter}"" xmlns:w=""{W_NAMESPACE}""><w:abstractNumId w:val=""{abstractNumIdCounter}"" /></w:num>");
+                     sb.Append($@"<w:num w:numId=""{abstractNumIdCounter}"" xmlns:w=""{WordNamespace}""><w:abstractNumId w:val=""{abstractNumIdCounter}"" /></w:num>");
                      abstractNumIdCounter++;
                 }
             }
@@ -62,7 +62,6 @@ public class NumberingDefinitionsGenerator
                 foreach (var listConfig in config.ListNumbering.BulletLists)
                 {
                      sb.Append(CreateListAbstractNumXml(listConfig, abstractNumIdCounter, false));
-                     sb.Append($@"<w:num w:numId=""{abstractNumIdCounter}"" xmlns:w=""{W_NAMESPACE}""><w:abstractNumId w:val=""{abstractNumIdCounter}"" /></w:num>");
                      sb.Append($@"<w:num w:numId=""{abstractNumIdCounter}"" xmlns:w=""{WordNamespace}""><w:abstractNumId w:val=""{abstractNumIdCounter}"" /></w:num>");
                      abstractNumIdCounter++;
                 }
@@ -152,7 +151,7 @@ public class NumberingDefinitionsGenerator
     private string CreateListAbstractNumXml(ListConfig config, int id, bool isNumbered)
     {
         var sb = new System.Text.StringBuilder();
-        sb.Append($@"<w:abstractNum w:abstractNumId=""{id}"" xmlns:w=""{W_NAMESPACE}"">");
+        sb.Append($@"<w:abstractNum w:abstractNumId=""{id}"" xmlns:w=""{WordNamespace}"">");
         sb.Append(@"<w:multiLevelType w:val=""hybridMultilevel"" />");
         
         sb.Append(@"<w:lvl w:ilvl=""0"">");
