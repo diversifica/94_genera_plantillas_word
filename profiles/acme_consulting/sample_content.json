@@ -1,0 +1,70 @@
+{
+    "document_id": "sample_doc_001",
+    "language": "es-ES",
+    "sections": [
+        {
+            "section_id": "S_COVER",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "style_id": "Title1",
+                    "text": "Documento de Ejemplo (Portada)"
+                },
+                {
+                    "type": "paragraph",
+                    "style_id": "Normal",
+                    "text": "Este documento sirve para validar visualmente la plantilla y la numeración."
+                }
+            ]
+        },
+        {
+            "section_id": "S_BODY",
+            "content": [
+                {
+                    "type": "heading",
+                    "level": 1,
+                    "text": "Introducción (Debe ser 1.)"
+                },
+                {
+                    "type": "paragraph",
+                    "style_id": "Normal",
+                    "text": "Párrafo de introducción."
+                },
+                {
+                    "type": "heading",
+                    "level": 2,
+                    "text": "Objetivo (Debe ser 1.1.)"
+                },
+                {
+                    "type": "heading",
+                    "level": 3,
+                    "text": "Detalle (Debe ser 1.1.1.)"
+                },
+                {
+                    "type": "list",
+                    "list_type": "numbered",
+                    "items": [
+                        {
+                            "text": "Item lista 1 (Debe ser 1.)"
+                        },
+                        {
+                            "text": "Item lista 2 (Debe ser 2.)"
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "list_type": "bullet",
+                    "items": [
+                        {
+                            "text": "Bullet 1"
+                        },
+                        {
+                            "text": "Bullet 2"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

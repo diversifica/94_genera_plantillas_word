@@ -8,6 +8,12 @@ E:\94_genera_plantillas_word\src\TemplateGen.Tests\bin\Debug\net10.0\TemplateGen
 E:\94_genera_plantillas_word\src\TemplateGen.Tests\bin\Debug\net10.0\TemplateGen.Tests.runtimeconfig.json
 E:\94_genera_plantillas_word\src\TemplateGen.Tests\bin\Debug\net10.0\TemplateGen.Tests.dll
 E:\94_genera_plantillas_word\src\TemplateGen.Tests\bin\Debug\net10.0\TemplateGen.Tests.pdb
+E:\94_genera_plantillas_word\src\TemplateGen.Tests\bin\Debug\net10.0\DocumentFormat.OpenXml.dll
+E:\94_genera_plantillas_word\src\TemplateGen.Tests\bin\Debug\net10.0\DocumentFormat.OpenXml.Framework.dll
+E:\94_genera_plantillas_word\src\TemplateGen.Tests\bin\Debug\net10.0\Humanizer.dll
+E:\94_genera_plantillas_word\src\TemplateGen.Tests\bin\Debug\net10.0\Json.More.dll
+E:\94_genera_plantillas_word\src\TemplateGen.Tests\bin\Debug\net10.0\JsonPointer.Net.dll
+E:\94_genera_plantillas_word\src\TemplateGen.Tests\bin\Debug\net10.0\JsonSchema.Net.dll
 E:\94_genera_plantillas_word\src\TemplateGen.Tests\bin\Debug\net10.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 E:\94_genera_plantillas_word\src\TemplateGen.Tests\bin\Debug\net10.0\Microsoft.TestPlatform.CoreUtilities.dll
 E:\94_genera_plantillas_word\src\TemplateGen.Tests\bin\Debug\net10.0\Microsoft.TestPlatform.PlatformAbstractions.dll
@@ -17,6 +23,7 @@ E:\94_genera_plantillas_word\src\TemplateGen.Tests\bin\Debug\net10.0\Microsoft.T
 E:\94_genera_plantillas_word\src\TemplateGen.Tests\bin\Debug\net10.0\Microsoft.TestPlatform.Utilities.dll
 E:\94_genera_plantillas_word\src\TemplateGen.Tests\bin\Debug\net10.0\Microsoft.VisualStudio.TestPlatform.Common.dll
 E:\94_genera_plantillas_word\src\TemplateGen.Tests\bin\Debug\net10.0\Newtonsoft.Json.dll
+E:\94_genera_plantillas_word\src\TemplateGen.Tests\bin\Debug\net10.0\System.IO.Packaging.dll
 E:\94_genera_plantillas_word\src\TemplateGen.Tests\bin\Debug\net10.0\xunit.assert.dll
 E:\94_genera_plantillas_word\src\TemplateGen.Tests\bin\Debug\net10.0\xunit.core.dll
 E:\94_genera_plantillas_word\src\TemplateGen.Tests\bin\Debug\net10.0\xunit.execution.dotnet.dll
@@ -99,10 +106,3 @@ E:\94_genera_plantillas_word\src\TemplateGen.Tests\obj\Debug\net10.0\refint\Temp
 E:\94_genera_plantillas_word\src\TemplateGen.Tests\obj\Debug\net10.0\TemplateGen.Tests.pdb
 E:\94_genera_plantillas_word\src\TemplateGen.Tests\obj\Debug\net10.0\TemplateGen.Tests.genruntimeconfig.cache
 E:\94_genera_plantillas_word\src\TemplateGen.Tests\obj\Debug\net10.0\ref\TemplateGen.Tests.dll
-E:\94_genera_plantillas_word\src\TemplateGen.Tests\bin\Debug\net10.0\Humanizer.dll
-E:\94_genera_plantillas_word\src\TemplateGen.Tests\bin\Debug\net10.0\Json.More.dll
-E:\94_genera_plantillas_word\src\TemplateGen.Tests\bin\Debug\net10.0\JsonPointer.Net.dll
-E:\94_genera_plantillas_word\src\TemplateGen.Tests\bin\Debug\net10.0\JsonSchema.Net.dll
-E:\94_genera_plantillas_word\src\TemplateGen.Tests\bin\Debug\net10.0\DocumentFormat.OpenXml.dll
-E:\94_genera_plantillas_word\src\TemplateGen.Tests\bin\Debug\net10.0\DocumentFormat.OpenXml.Framework.dll
-E:\94_genera_plantillas_word\src\TemplateGen.Tests\bin\Debug\net10.0\System.IO.Packaging.dll

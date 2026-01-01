@@ -4,6 +4,7 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Linq;
 using TemplateGen.Core.Services;
+using TemplateGen.Core.Models;
 
 
 namespace TemplateGen.Cli;
@@ -31,22 +32,30 @@ class Program
             description: "Enable strict mode (fail on warnings).",
             getDefaultValue: () => false);
 
+        var contentOption = new Option<FileInfo?>(
+            name: "--content",
+            description: "Path to the JSON content file.")
+        {
+            IsRequired = false
+        };
+
         var rootCommand = new RootCommand("TemplateGen - OpenXML Word Template Generator")
         {
             profileOption,
             outputOption,
-            strictOption
+            strictOption,
+            contentOption
         };
 
-        rootCommand.SetHandler(async (profileFile, outputDir, strict) =>
+        rootCommand.SetHandler(async (profileFile, outputDir, strict, contentFile) =>
         {
-            await RunAsync(profileFile, outputDir, strict);
-        }, profileOption, outputOption, strictOption);
+            await RunAsync(profileFile, outputDir, strict, contentFile);
+        }, profileOption, outputOption, strictOption, contentOption);
 
         return await rootCommand.InvokeAsync(args);
     }
 
-    static async Task RunAsync(FileInfo profileFile, DirectoryInfo? outputDir, bool strict)
+    static async Task RunAsync(FileInfo profileFile, DirectoryInfo? outputDir, bool strict, FileInfo? contentFile)
     {
         try
         {
@@ -98,6 +107,15 @@ class Program
             Console.WriteLine($"Version        : {profile.Metadata.ProfileVersion}");
             Console.WriteLine("--------------------------------------------------");
 
+            DocumentContent? content = null;
+            if (contentFile != null && contentFile.Exists)
+            {
+                 Console.WriteLine($"Loading content: {contentFile.FullName}");
+                 // Simple deserialization for MVP
+                 var contentJson = await File.ReadAllTextAsync(contentFile.FullName);
+                 content = System.Text.Json.JsonSerializer.Deserialize<DocumentContent>(contentJson);
+            }
+
             if (outputDir != null)
             {
                 if (!outputDir.Exists) outputDir.Create();
@@ -121,7 +139,7 @@ class Program
                     Console.WriteLine("Generating Word Document...");
                     var generator = new WordGeneratorService();
                     var docPath = Path.Combine(outputDir.FullName, "GeneratedDocument.docx");
-                    generator.Generate(profile, docPath);
+                    generator.Generate(profile, docPath, content);
                     Console.WriteLine($"Document created successfully: {docPath}");
                 }
             }
