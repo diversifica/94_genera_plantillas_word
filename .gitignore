@@ -38,3 +38,7 @@ venv.bak/
 /logs
 **/obj/
 **/bin/
+output_*/
+final_demo_*/
+test_*/
+*.log
