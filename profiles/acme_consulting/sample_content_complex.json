@@ -1,0 +1,91 @@
+{
+    "document_id": "doc_complex_001",
+    "language": "es-ES",
+    "sections": [
+        {
+            "section_id": "main_section",
+            "content": [
+                {
+                    "type": "heading",
+                    "level": 1,
+                    "text": "Phase 7 Verification: Tables & Images"
+                },
+                {
+                    "type": "paragraph",
+                    "style_id": "Normal",
+                    "text": "Below is a table demonstrating nested content capabilities."
+                },
+                {
+                    "type": "table",
+                    "rows": [
+                        {
+                            "cells": [
+                                {
+                                    "content": [
+                                        {
+                                            "type": "paragraph",
+                                            "style_id": "Normal",
+                                            "text": "Header 1"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "content": [
+                                        {
+                                            "type": "paragraph",
+                                            "style_id": "Normal",
+                                            "text": "Header 2"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "cells": [
+                                {
+                                    "content": [
+                                        {
+                                            "type": "paragraph",
+                                            "style_id": "Normal",
+                                            "text": "Row 1, Cell 1"
+                                        },
+                                        {
+                                            "type": "list",
+                                            "list_type": "bullet",
+                                            "items": [
+                                                {
+                                                    "text": "Bullet inside cell"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "content": [
+                                        {
+                                            "type": "paragraph",
+                                            "style_id": "Normal",
+                                            "text": "Row 1, Cell 2"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "heading",
+                    "level": 2,
+                    "text": "Image Verification"
+                },
+                {
+                    "type": "image",
+                    "source": "missing_logo.png",
+                    "width": 200,
+                    "height": 100,
+                    "alt_text": "Company Logo (Missing)"
+                }
+            ]
+        }
+    ]
+}
