@@ -4,7 +4,9 @@ using System.Text.Json.Serialization;
 
 public record TemplateProfile(
     [property: JsonPropertyName("schema_version")] string SchemaVersion,
-    [property: JsonPropertyName("metadata")] ProfileMetadata Metadata
+    [property: JsonPropertyName("metadata")] ProfileMetadata Metadata,
+    [property: JsonPropertyName("document")] DocumentSettings? Document,
+    [property: JsonPropertyName("styles")] StylesConfig? Styles
 );
 
 public record ProfileMetadata(
