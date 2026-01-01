@@ -10,3 +10,4 @@ E:\94_genera_plantillas_word\src\TemplateGen.Core\obj\Debug\net10.0\TemplateGen.
 E:\94_genera_plantillas_word\src\TemplateGen.Core\obj\Debug\net10.0\refint\TemplateGen.Core.dll
 E:\94_genera_plantillas_word\src\TemplateGen.Core\obj\Debug\net10.0\TemplateGen.Core.pdb
 E:\94_genera_plantillas_word\src\TemplateGen.Core\obj\Debug\net10.0\ref\TemplateGen.Core.dll
+E:\94_genera_plantillas_word\src\TemplateGen.Core\obj\Debug\net10.0\TemplateGen.Core.csproj.AssemblyReference.cache

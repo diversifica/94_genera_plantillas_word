@@ -1,11 +1,162 @@
 {
   "version": 3,
   "targets": {
-    "net10.0": {}
+    "net10.0": {
+      "Humanizer.Core/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Humanizer.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Humanizer.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Json.More.Net/2.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Json.More.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Json.More.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "JsonPointer.Net/6.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Humanizer.Core": "3.0.1",
+          "Json.More.Net": "2.2.0"
+        },
+        "compile": {
+          "lib/net10.0/JsonPointer.Net.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/JsonPointer.Net.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "JsonSchema.Net/8.0.5": {
+        "type": "package",
+        "dependencies": {
+          "JsonPointer.Net": "6.0.1"
+        },
+        "compile": {
+          "lib/net9.0/JsonSchema.Net.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/JsonSchema.Net.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Humanizer.Core/3.0.1": {
+      "sha512": "scB3+KcxNmEjZK5V8rKCW2gIiL8m8KH91w14FuuExyhi9xTyAJ+jr+DDxGdy12mHmioe2uvjxTfMgM7WmSUFlw==",
+      "type": "package",
+      "path": "humanizer.core/3.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "analyzers/dotnet/roslyn3.8/cs/Humanizer.Analyzers.dll",
+        "humanizer.core.3.0.1.nupkg.sha512",
+        "humanizer.core.nuspec",
+        "lib/net10.0/Humanizer.dll",
+        "lib/net10.0/Humanizer.xml",
+        "lib/net48/Humanizer.dll",
+        "lib/net48/Humanizer.xml",
+        "lib/net8.0/Humanizer.dll",
+        "lib/net8.0/Humanizer.xml",
+        "lib/netstandard2.0/Humanizer.dll",
+        "lib/netstandard2.0/Humanizer.xml",
+        "logo.png"
+      ]
+    },
+    "Json.More.Net/2.2.0": {
+      "sha512": "fiyEZJNgiCzDa7/N9bZ+CnM5qnawyJ54+CkHNZ2svwxWBWNNFzydJ7RlroqMdOjokGBiLcKIxdajNvOklzlYqQ==",
+      "type": "package",
+      "path": "json.more.net/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "json-logo-256.png",
+        "json.more.net.2.2.0.nupkg.sha512",
+        "json.more.net.nuspec",
+        "lib/net10.0/Json.More.dll",
+        "lib/net10.0/Json.More.xml",
+        "lib/net8.0/Json.More.dll",
+        "lib/net8.0/Json.More.xml",
+        "lib/net9.0/Json.More.dll",
+        "lib/net9.0/Json.More.xml",
+        "lib/netstandard2.0/Json.More.dll",
+        "lib/netstandard2.0/Json.More.xml"
+      ]
+    },
+    "JsonPointer.Net/6.0.1": {
+      "sha512": "EbSJkd/1y9r0WBIptjUctA6BzjgKh1aNU/g6QGgdMZVZ8wc0S/ysQhfiQerP9/VFTeENFHFdCQaoOk9fZqwnFQ==",
+      "type": "package",
+      "path": "jsonpointer.net/6.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "json-logo-256.png",
+        "jsonpointer.net.6.0.1.nupkg.sha512",
+        "jsonpointer.net.nuspec",
+        "lib/net10.0/JsonPointer.Net.dll",
+        "lib/net10.0/JsonPointer.Net.xml",
+        "lib/net8.0/JsonPointer.Net.dll",
+        "lib/net8.0/JsonPointer.Net.xml",
+        "lib/net9.0/JsonPointer.Net.dll",
+        "lib/net9.0/JsonPointer.Net.xml",
+        "lib/netstandard2.0/JsonPointer.Net.dll",
+        "lib/netstandard2.0/JsonPointer.Net.xml"
+      ]
+    },
+    "JsonSchema.Net/8.0.5": {
+      "sha512": "QoEqdoAUgAkbzuFAiHySjGuh8lJs8L8DxkEDGJLEebtlZ6+EbEr0wmYlidErSS2ASNFOModueb83DLNIRLqshg==",
+      "type": "package",
+      "path": "jsonschema.net/8.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "json-logo-256.png",
+        "jsonschema.net.8.0.5.nupkg.sha512",
+        "jsonschema.net.nuspec",
+        "lib/net8.0/JsonSchema.Net.dll",
+        "lib/net8.0/JsonSchema.Net.pdb",
+        "lib/net8.0/JsonSchema.Net.xml",
+        "lib/net9.0/JsonSchema.Net.dll",
+        "lib/net9.0/JsonSchema.Net.pdb",
+        "lib/net9.0/JsonSchema.Net.xml",
+        "lib/netstandard2.0/JsonSchema.Net.dll",
+        "lib/netstandard2.0/JsonSchema.Net.pdb",
+        "lib/netstandard2.0/JsonSchema.Net.xml"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net10.0": []
+    "net10.0": [
+      "JsonSchema.Net >= 8.0.5"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\diver\\.nuget\\packages\\": {},
@@ -57,6 +208,12 @@
     "frameworks": {
       "net10.0": {
         "targetAlias": "net10.0",
+        "dependencies": {
+          "JsonSchema.Net": {
+            "target": "Package",
+            "version": "[8.0.5, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

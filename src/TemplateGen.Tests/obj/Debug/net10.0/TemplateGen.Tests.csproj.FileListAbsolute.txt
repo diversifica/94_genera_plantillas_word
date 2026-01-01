@@ -99,3 +99,7 @@ E:\94_genera_plantillas_word\src\TemplateGen.Tests\obj\Debug\net10.0\refint\Temp
 E:\94_genera_plantillas_word\src\TemplateGen.Tests\obj\Debug\net10.0\TemplateGen.Tests.pdb
 E:\94_genera_plantillas_word\src\TemplateGen.Tests\obj\Debug\net10.0\TemplateGen.Tests.genruntimeconfig.cache
 E:\94_genera_plantillas_word\src\TemplateGen.Tests\obj\Debug\net10.0\ref\TemplateGen.Tests.dll
+E:\94_genera_plantillas_word\src\TemplateGen.Tests\bin\Debug\net10.0\Humanizer.dll
+E:\94_genera_plantillas_word\src\TemplateGen.Tests\bin\Debug\net10.0\Json.More.dll
+E:\94_genera_plantillas_word\src\TemplateGen.Tests\bin\Debug\net10.0\JsonPointer.Net.dll
+E:\94_genera_plantillas_word\src\TemplateGen.Tests\bin\Debug\net10.0\JsonSchema.Net.dll

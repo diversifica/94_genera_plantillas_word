@@ -31,3 +31,7 @@ E:\94_genera_plantillas_word\src\TemplateGen.Cli\obj\Debug\net10.0\refint\Templa
 E:\94_genera_plantillas_word\src\TemplateGen.Cli\obj\Debug\net10.0\TemplateGen.Cli.pdb
 E:\94_genera_plantillas_word\src\TemplateGen.Cli\obj\Debug\net10.0\TemplateGen.Cli.genruntimeconfig.cache
 E:\94_genera_plantillas_word\src\TemplateGen.Cli\obj\Debug\net10.0\ref\TemplateGen.Cli.dll
+E:\94_genera_plantillas_word\src\TemplateGen.Cli\bin\Debug\net10.0\Humanizer.dll
+E:\94_genera_plantillas_word\src\TemplateGen.Cli\bin\Debug\net10.0\Json.More.dll
+E:\94_genera_plantillas_word\src\TemplateGen.Cli\bin\Debug\net10.0\JsonPointer.Net.dll
+E:\94_genera_plantillas_word\src\TemplateGen.Cli\bin\Debug\net10.0\JsonSchema.Net.dll
