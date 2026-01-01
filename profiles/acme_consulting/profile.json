@@ -90,9 +90,11 @@
         "based_on": "Normal",
         "properties": {
           "run": {
-            "font_role": "headings",
-            "font_size_points": 18,
-            "bold": true
+            "font_name": "Segoe UI Black",
+            "font_size_points": 24,
+            "bold": true,
+            "color": "800000",
+            "underline": "single"
           },
           "paragraph": {
             "alignment": "left",
@@ -117,9 +119,10 @@
         "based_on": "Normal",
         "properties": {
           "run": {
-            "font_role": "headings",
+            "font_name": "Segoe UI",
             "font_size_points": 14,
-            "bold": true
+            "bold": true,
+            "color": "0000FF"
           },
           "paragraph": {
             "alignment": "left",
@@ -143,9 +146,10 @@
         "based_on": "Normal",
         "properties": {
           "run": {
-            "font_role": "headings",
+            "font_name": "Segoe UI",
             "font_size_points": 12,
-            "bold": true
+            "bold": true,
+            "color": "006400"
           },
           "paragraph": {
             "alignment": "left",

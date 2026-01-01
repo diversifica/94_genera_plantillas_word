@@ -147,11 +147,21 @@ class Program
 
                 if (!hasErrors)
                 {
-                    Console.WriteLine("Generating Word Template...");
                     var generator = new WordGeneratorService();
-                    var docPath = Path.Combine(outputDir.FullName, "GeneratedTemplate.dotx");
-                    generator.Generate(profile, docPath, content);
-                    Console.WriteLine($"Template created successfully: {docPath}");
+                    if (content != null)
+                    {
+                        Console.WriteLine("Generating Word Document (with content)...");
+                        var docPath = Path.Combine(outputDir.FullName, "GeneratedDocument.docx");
+                        generator.Generate(profile, docPath, content);
+                        Console.WriteLine($"Document created successfully: {docPath}");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Generating Word Template...");
+                        var docPath = Path.Combine(outputDir.FullName, "GeneratedTemplate.dotx");
+                        generator.Generate(profile, docPath, content);
+                        Console.WriteLine($"Template created successfully: {docPath}");
+                    }
                 }
             }
 
