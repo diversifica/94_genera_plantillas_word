@@ -3,6 +3,7 @@ using System.CommandLine;
 using System.IO;
 using System.Threading.Tasks;
 using System.Linq;
+using Microsoft.Extensions.Logging;
 using TemplateGen.Core.Services;
 using TemplateGen.Core.Models;
 
@@ -57,9 +58,19 @@ class Program
 
     static async Task RunAsync(FileInfo profileFile, DirectoryInfo? outputDir, bool strict, FileInfo? contentFile)
     {
+        // Configure logging
+        using var loggerFactory = LoggerFactory.Create(builder =>
+        {
+            builder.AddConsole();
+            builder.SetMinimumLevel(LogLevel.Information);
+        });
+
+        var wordGenLogger = loggerFactory.CreateLogger<WordGeneratorService>();
+        var contentGenLogger = loggerFactory.CreateLogger<ContentGeneratorService>();
+
         try
         {
-            Console.WriteLine($"TemplateGen (Phase 2)");
+            Console.WriteLine($"TemplateGen (Phase 8)");
             Console.WriteLine($"Loading profile: {profileFile.FullName}");
 
             // Locate schema (POC: assumes running from repo root or adjacent folders)

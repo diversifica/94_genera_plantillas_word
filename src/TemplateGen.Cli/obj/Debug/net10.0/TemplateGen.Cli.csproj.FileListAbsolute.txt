@@ -38,3 +38,15 @@ E:\94_genera_plantillas_word\src\TemplateGen.Cli\obj\Debug\net10.0\refint\Templa
 E:\94_genera_plantillas_word\src\TemplateGen.Cli\obj\Debug\net10.0\TemplateGen.Cli.pdb
 E:\94_genera_plantillas_word\src\TemplateGen.Cli\obj\Debug\net10.0\TemplateGen.Cli.genruntimeconfig.cache
 E:\94_genera_plantillas_word\src\TemplateGen.Cli\obj\Debug\net10.0\ref\TemplateGen.Cli.dll
+E:\94_genera_plantillas_word\src\TemplateGen.Cli\bin\Debug\net10.0\Microsoft.Extensions.Configuration.dll
+E:\94_genera_plantillas_word\src\TemplateGen.Cli\bin\Debug\net10.0\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\94_genera_plantillas_word\src\TemplateGen.Cli\bin\Debug\net10.0\Microsoft.Extensions.Configuration.Binder.dll
+E:\94_genera_plantillas_word\src\TemplateGen.Cli\bin\Debug\net10.0\Microsoft.Extensions.DependencyInjection.dll
+E:\94_genera_plantillas_word\src\TemplateGen.Cli\bin\Debug\net10.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\94_genera_plantillas_word\src\TemplateGen.Cli\bin\Debug\net10.0\Microsoft.Extensions.Logging.dll
+E:\94_genera_plantillas_word\src\TemplateGen.Cli\bin\Debug\net10.0\Microsoft.Extensions.Logging.Abstractions.dll
+E:\94_genera_plantillas_word\src\TemplateGen.Cli\bin\Debug\net10.0\Microsoft.Extensions.Logging.Configuration.dll
+E:\94_genera_plantillas_word\src\TemplateGen.Cli\bin\Debug\net10.0\Microsoft.Extensions.Logging.Console.dll
+E:\94_genera_plantillas_word\src\TemplateGen.Cli\bin\Debug\net10.0\Microsoft.Extensions.Options.dll
+E:\94_genera_plantillas_word\src\TemplateGen.Cli\bin\Debug\net10.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+E:\94_genera_plantillas_word\src\TemplateGen.Cli\bin\Debug\net10.0\Microsoft.Extensions.Primitives.dll

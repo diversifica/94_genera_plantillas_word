@@ -6,12 +6,22 @@ using System.Linq;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Abstractions;
 using TemplateGen.Core.Models;
 
 public class WordGeneratorService
 {
+    private readonly ILogger<WordGeneratorService> _logger;
+
+    public WordGeneratorService(ILogger<WordGeneratorService>? logger = null)
+    {
+        _logger = logger ?? NullLogger<WordGeneratorService>.Instance;
+    }
+
     public void Generate(TemplateProfile profile, string outputPath, DocumentContent? content = null)
     {
+        _logger.LogInformation("Starting document generation for output: {OutputPath}", outputPath);
         if (profile == null) throw new ArgumentNullException(nameof(profile));
         if (string.IsNullOrWhiteSpace(outputPath)) throw new ArgumentException("Output path cannot be empty", nameof(outputPath));
 
@@ -51,7 +61,7 @@ public class WordGeneratorService
             // 3. Generate Content
             if (content != null)
             {
-                var contentGenerator = new ContentGeneratorService();
+                var contentGenerator = new ContentGeneratorService(_logger as ILogger<ContentGeneratorService>);
                 contentGenerator.GenerateContent(mainPart, content);
             }
             else

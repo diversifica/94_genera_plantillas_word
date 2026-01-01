@@ -7,18 +7,23 @@ using System.Linq;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Abstractions;
 using A = DocumentFormat.OpenXml.Drawing;
 using DW = DocumentFormat.OpenXml.Drawing.Wordprocessing;
 using PIC = DocumentFormat.OpenXml.Drawing.Pictures;
 using TemplateGen.Core.Models;
 
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
-#pragma warning disable CS8604 // Possible null reference argument.
-
 public class ContentGeneratorService
 {
     private const int NUMBERED_LIST_NUM_ID = 2;
     private const int BULLET_LIST_NUM_ID = 3;
+    private readonly ILogger<ContentGeneratorService> _logger;
+
+    public ContentGeneratorService(ILogger<ContentGeneratorService>? logger = null)
+    {
+        _logger = logger ?? NullLogger<ContentGeneratorService>.Instance;
+    }
 
     public void GenerateContent(MainDocumentPart mainPart, DocumentContent content)
     {
@@ -181,6 +186,7 @@ public class ContentGeneratorService
     {
         if (string.IsNullOrEmpty(imgElem.Source) || !File.Exists(imgElem.Source))
         {
+            _logger.LogWarning("Image file not found: {ImagePath}. Inserting placeholder text.", imgElem.Source);
             var pPlaceholder = new Paragraph();
             pPlaceholder.Append(new Run(new Text($"[MISSING IMAGE: {imgElem.Source}]")));
             return pPlaceholder;
