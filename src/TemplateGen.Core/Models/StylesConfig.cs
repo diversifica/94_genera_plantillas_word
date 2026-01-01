@@ -23,7 +23,8 @@ public record RunPropertiesConfig(
     [property: JsonPropertyName("font_size_points")] int? FontSizeMembers,
     [property: JsonPropertyName("bold")] bool? Bold,
     [property: JsonPropertyName("italic")] bool? Italic,
-    [property: JsonPropertyName("underline")] string? Underline
+    [property: JsonPropertyName("underline")] string? Underline,
+    [property: JsonPropertyName("color")] string? Color
 );
 
 public record ParagraphPropertiesConfig(
