@@ -1,0 +1,580 @@
+{
+  "schema_version": "1.0.0",
+  "metadata": {
+    "client_id": "acme_consulting",
+    "client_name": "ACME Consulting",
+    "profile_version": "1.0.0",
+    "created_at": "2026-01-01T00:00:00+01:00",
+    "updated_at": "2026-01-01T00:00:00+01:00",
+    "author": "Antonio",
+    "description": "Perfil golden sample para validar el motor OpenXML.",
+    "tags": [
+      "golden",
+      "poc",
+      "a4",
+      "es-ES"
+    ]
+  },
+  "document": {
+    "page_size": "A4",
+    "orientation": "landscape",
+    "margins": {
+      "top_twips": 1440,
+      "bottom_twips": 1440,
+      "left_twips": 1440,
+      "right_twips": 1440
+    },
+    "language": "es-ES",
+    "default_tab_stop_twips": 720,
+    "compatibility": {
+      "target_word": "365",
+      "strict_openxml": true
+    }
+  },
+  "fonts": {
+    "body": {
+      "font_name": "Times New Roman",
+      "fallback_fonts": [
+        "Arial",
+        "Liberation Sans"
+      ]
+    },
+    "headings": {
+      "font_name": "Calibri",
+      "fallback_fonts": [
+        "Arial",
+        "Liberation Sans"
+      ]
+    },
+    "monospace": {
+      "font_name": "Consolas",
+      "fallback_fonts": [
+        "Courier New",
+        "Liberation Mono"
+      ]
+    }
+  },
+  "styles": {
+    "paragraph_styles": [
+      {
+        "style_id": "Normal",
+        "style_name": "Normal",
+        "type": "paragraph",
+        "properties": {
+          "run": {
+            "font_role": "body",
+            "font_size_points": 11,
+            "bold": false,
+            "italic": false,
+            "underline": "none",
+            "caps": false
+          },
+          "paragraph": {
+            "alignment": "justify",
+            "spacing_before_twips": 0,
+            "spacing_after_twips": 120,
+            "line_spacing": {
+              "type": "multiple",
+              "value": 1.15
+            }
+          },
+          "pagination": {
+            "widow_control": true
+          }
+        }
+      },
+      {
+        "style_id": "Heading1",
+        "style_name": "Título 1",
+        "type": "paragraph",
+        "based_on": "Normal",
+        "properties": {
+          "run": {
+            "font_role": "headings",
+            "font_size_points": 18,
+            "bold": true,
+            "underline": "single"
+          },
+          "paragraph": {
+            "alignment": "left",
+            "spacing_before_twips": 480,
+            "spacing_after_twips": 240,
+            "line_spacing": {
+              "type": "multiple",
+              "value": 1.0
+            },
+            "outline_level": 0
+          },
+          "pagination": {
+            "keep_with_next": true,
+            "page_break_before": true
+          }
+        }
+      },
+      {
+        "style_id": "Heading2",
+        "style_name": "Título 2",
+        "type": "paragraph",
+        "based_on": "Normal",
+        "properties": {
+          "run": {
+            "font_role": "headings",
+            "font_size_points": 14,
+            "bold": true
+          },
+          "paragraph": {
+            "alignment": "left",
+            "spacing_before_twips": 360,
+            "spacing_after_twips": 180,
+            "line_spacing": {
+              "type": "multiple",
+              "value": 1.0
+            },
+            "outline_level": 1
+          },
+          "pagination": {
+            "keep_with_next": true
+          }
+        }
+      },
+      {
+        "style_id": "Heading3",
+        "style_name": "Título 3",
+        "type": "paragraph",
+        "based_on": "Normal",
+        "properties": {
+          "run": {
+            "font_role": "headings",
+            "font_size_points": 12,
+            "bold": true
+          },
+          "paragraph": {
+            "alignment": "left",
+            "spacing_before_twips": 240,
+            "spacing_after_twips": 120,
+            "line_spacing": {
+              "type": "multiple",
+              "value": 1.0
+            },
+            "outline_level": 2
+          },
+          "pagination": {
+            "keep_with_next": true
+          }
+        }
+      },
+      {
+        "style_id": "BulletList",
+        "style_name": "Lista con viñetas",
+        "type": "paragraph",
+        "based_on": "Normal",
+        "properties": {
+          "run": {
+            "font_role": "body",
+            "font_size_points": 11
+          },
+          "paragraph": {
+            "alignment": "left",
+            "indentation": {
+              "left_twips": 720,
+              "hanging_twips": 360
+            },
+            "spacing_before_twips": 0,
+            "spacing_after_twips": 120,
+            "line_spacing": {
+              "type": "multiple",
+              "value": 1.15
+            }
+          }
+        }
+      },
+      {
+        "style_id": "NumberedList",
+        "style_name": "Lista numerada",
+        "type": "paragraph",
+        "based_on": "Normal",
+        "properties": {
+          "run": {
+            "font_role": "body",
+            "font_size_points": 11
+          },
+          "paragraph": {
+            "alignment": "left",
+            "indentation": {
+              "left_twips": 720,
+              "hanging_twips": 360
+            },
+            "spacing_before_twips": 0,
+            "spacing_after_twips": 120,
+            "line_spacing": {
+              "type": "multiple",
+              "value": 1.15
+            }
+          }
+        }
+      },
+      {
+        "style_id": "Quote",
+        "style_name": "Cita",
+        "type": "paragraph",
+        "based_on": "Normal",
+        "properties": {
+          "run": {
+            "font_role": "body",
+            "font_size_points": 11,
+            "italic": true
+          },
+          "paragraph": {
+            "alignment": "left",
+            "indentation": {
+              "left_twips": 720,
+              "right_twips": 360
+            },
+            "spacing_before_twips": 120,
+            "spacing_after_twips": 120,
+            "line_spacing": {
+              "type": "multiple",
+              "value": 1.15
+            }
+          }
+        }
+      },
+      {
+        "style_id": "Note",
+        "style_name": "Nota",
+        "type": "paragraph",
+        "based_on": "Normal",
+        "properties": {
+          "run": {
+            "font_role": "body",
+            "font_size_points": 11,
+            "bold": true
+          },
+          "paragraph": {
+            "alignment": "left",
+            "indentation": {
+              "left_twips": 360
+            },
+            "spacing_before_twips": 120,
+            "spacing_after_twips": 120,
+            "line_spacing": {
+              "type": "multiple",
+              "value": 1.15
+            }
+          }
+        }
+      },
+      {
+        "style_id": "Example",
+        "style_name": "Ejemplo",
+        "type": "paragraph",
+        "based_on": "Normal",
+        "properties": {
+          "run": {
+            "font_role": "body",
+            "font_size_points": 11
+          },
+          "paragraph": {
+            "alignment": "left",
+            "indentation": {
+              "left_twips": 360
+            },
+            "spacing_before_twips": 120,
+            "spacing_after_twips": 120,
+            "line_spacing": {
+              "type": "multiple",
+              "value": 1.15
+            }
+          }
+        }
+      },
+      {
+        "style_id": "CodeBlock",
+        "style_name": "Código",
+        "type": "paragraph",
+        "based_on": "Normal",
+        "properties": {
+          "run": {
+            "font_role": "monospace",
+            "font_size_points": 10
+          },
+          "paragraph": {
+            "alignment": "left",
+            "indentation": {
+              "left_twips": 360
+            },
+            "spacing_before_twips": 120,
+            "spacing_after_twips": 120,
+            "line_spacing": {
+              "type": "multiple",
+              "value": 1.0
+            }
+          }
+        }
+      },
+      {
+        "style_id": "FigureCaption",
+        "style_name": "Pie de figura",
+        "type": "paragraph",
+        "based_on": "Normal",
+        "properties": {
+          "run": {
+            "font_role": "body",
+            "font_size_points": 10,
+            "italic": true
+          },
+          "paragraph": {
+            "alignment": "center",
+            "spacing_before_twips": 120,
+            "spacing_after_twips": 240,
+            "line_spacing": {
+              "type": "multiple",
+              "value": 1.0
+            }
+          }
+        }
+      }
+    ],
+    "character_styles": [
+      {
+        "style_id": "Emphasis",
+        "style_name": "Énfasis",
+        "type": "character",
+        "run": {
+          "font_role": "body",
+          "italic": true
+        }
+      },
+      {
+        "style_id": "StrongEmphasis",
+        "style_name": "Énfasis fuerte",
+        "type": "character",
+        "run": {
+          "font_role": "body",
+          "bold": true
+        }
+      },
+      {
+        "style_id": "Term",
+        "style_name": "Término",
+        "type": "character",
+        "run": {
+          "font_role": "body",
+          "bold": true
+        }
+      },
+      {
+        "style_id": "InlineCode",
+        "style_name": "Código en línea",
+        "type": "character",
+        "run": {
+          "font_role": "monospace"
+        }
+      }
+    ]
+  },
+  "numbering": {
+    "heading_numbering": {
+      "scheme_id": "HeadingsDecimal",
+      "restart_on_section": false,
+      "levels": [
+        {
+          "level_index": 0,
+          "number_format": "decimal",
+          "level_text_pattern": "%1.",
+          "start_at": 1,
+          "indentation": {
+            "left_twips": 0,
+            "hanging_twips": 360
+          }
+        },
+        {
+          "level_index": 1,
+          "number_format": "decimal",
+          "level_text_pattern": "%1.%2.",
+          "start_at": 1,
+          "indentation": {
+            "left_twips": 360,
+            "hanging_twips": 360
+          }
+        },
+        {
+          "level_index": 2,
+          "number_format": "decimal",
+          "level_text_pattern": "%1.%2.%3.",
+          "start_at": 1,
+          "indentation": {
+            "left_twips": 720,
+            "hanging_twips": 360
+          }
+        }
+      ],
+      "style_bindings": [
+        {
+          "level_index": 0,
+          "style_id": "Heading1"
+        },
+        {
+          "level_index": 1,
+          "style_id": "Heading2"
+        },
+        {
+          "level_index": 2,
+          "style_id": "Heading3"
+        }
+      ]
+    },
+    "list_numbering": {
+      "numbered_lists": [
+        {
+          "scheme_id": "ListDecimal",
+          "level_index": 0,
+          "restart_behavior": "restart_on_style",
+          "indentation": {
+            "left_twips": 720,
+            "hanging_twips": 360
+          }
+        }
+      ],
+      "bullet_lists": [
+        {
+          "scheme_id": "ListBullet",
+          "level_index": 0,
+          "restart_behavior": "continue",
+          "indentation": {
+            "left_twips": 720,
+            "hanging_twips": 360
+          }
+        }
+      ]
+    }
+  },
+  "sections": {
+    "items": [
+      {
+        "section_id": "S_COVER",
+        "type": "cover",
+        "page_numbering": {
+          "mode": "none"
+        },
+        "different_first_page": true
+      },
+      {
+        "section_id": "S_TOC",
+        "type": "toc",
+        "page_numbering": {
+          "mode": "roman",
+          "start_at": 1
+        },
+        "different_first_page": true
+      },
+      {
+        "section_id": "S_BODY",
+        "type": "body",
+        "page_numbering": {
+          "mode": "arabic",
+          "start_at": 1
+        },
+        "different_first_page": false
+      },
+      {
+        "section_id": "S_ANNEX",
+        "type": "annexes",
+        "page_numbering": {
+          "mode": "arabic"
+        },
+        "different_first_page": false
+      }
+    ]
+  },
+  "headers_footers": {
+    "items": [
+      {
+        "section_id": "S_COVER",
+        "header": {
+          "text_center": "",
+          "include_page_number": false
+        },
+        "footer": {
+          "text_center": "",
+          "include_page_number": false
+        }
+      },
+      {
+        "section_id": "S_TOC",
+        "header": {
+          "text_left": "ACME Consulting",
+          "include_page_number": false,
+          "logo_asset_id": "LOGO_MAIN"
+        },
+        "footer": {
+          "include_page_number": true,
+          "page_number_format": "roman"
+        }
+      },
+      {
+        "section_id": "S_BODY",
+        "header": {
+          "text_left": "ACME Consulting",
+          "text_right": "Documento",
+          "include_page_number": false,
+          "logo_asset_id": "LOGO_MAIN"
+        },
+        "footer": {
+          "text_left": "Confidencial",
+          "include_page_number": true,
+          "page_number_format": "arabic"
+        }
+      },
+      {
+        "section_id": "S_ANNEX",
+        "header": {
+          "text_left": "ACME Consulting",
+          "text_right": "Anexos",
+          "include_page_number": false,
+          "logo_asset_id": "LOGO_MAIN"
+        },
+        "footer": {
+          "include_page_number": true,
+          "page_number_format": "arabic"
+        }
+      }
+    ]
+  },
+  "toc": {
+    "enabled": true,
+    "levels": 3,
+    "include_annexes": true,
+    "toc_title": "Índice",
+    "style_mapping": [
+      {
+        "outline_level": 0,
+        "style_id": "Heading1"
+      },
+      {
+        "outline_level": 1,
+        "style_id": "Heading2"
+      },
+      {
+        "outline_level": 2,
+        "style_id": "Heading3"
+      }
+    ]
+  },
+  "assets": {
+    "items": [
+      {
+        "asset_id": "LOGO_MAIN",
+        "relative_path": "assets/logo.png",
+        "type": "logo",
+        "usage": "header"
+      }
+    ]
+  },
+  "rules": {
+    "forbid_manual_formatting": true,
+    "enforce_styles_only": true,
+    "auto_map_bold_to_strong_emphasis": true,
+    "auto_map_italic_to_emphasis": true
+  }
+}
