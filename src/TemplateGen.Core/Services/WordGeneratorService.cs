@@ -10,7 +10,7 @@ using TemplateGen.Core.Models;
 
 public class WordGeneratorService
 {
-    public void Generate(TemplateProfile profile, string outputPath)
+    public void Generate(TemplateProfile profile, string outputPath, DocumentContent? content = null)
     {
         if (profile == null) throw new ArgumentNullException(nameof(profile));
         if (string.IsNullOrWhiteSpace(outputPath)) throw new ArgumentException("Output path cannot be empty", nameof(outputPath));
@@ -36,22 +36,40 @@ public class WordGeneratorService
                 stylePart.Styles.Save();
             }
 
+            // 2. Generate Numbering if config exists
+            if (profile.Numbering != null)
+            {
+                var numberingPart = mainPart.AddNewPart<NumberingDefinitionsPart>();
+                var numberingGenerator = new NumberingDefinitionsGenerator();
+                numberingPart.Numbering = numberingGenerator.GenerateNumbering(profile.Numbering);
+                numberingPart.Numbering.Save();
+            }
+
             mainPart.Document = new Document();
             var body = mainPart.Document.AppendChild(new Body());
 
-            // Add simple text for PoC verification
-            var paragraph = body.AppendChild(new Paragraph());
-            
-            // Apply Normal style explicitly to test
-            if (profile.Styles?.ParagraphStyles?.Any(s => s.StyleId == "Normal") == true)
+            // 3. Generate Content
+            if (content != null)
             {
-               paragraph.ParagraphProperties = new ParagraphProperties(new ParagraphStyleId() { Val = "Normal" });
+                var contentGenerator = new ContentGeneratorService();
+                contentGenerator.GenerateContent(mainPart, content);
+            }
+            else
+            {
+                // Default placeholder
+                var p = new Paragraph();
+                var pPr = new ParagraphProperties();
+                pPr.ParagraphStyleId = new ParagraphStyleId() { Val = "Normal" }; 
+                p.Append(pPr);
+                var r = new Run();
+                var t = new Text($"TemplateGen Generated Document for client: {profile.Metadata?.ClientName ?? "Unknown"}");
+                r.Append(t);
+                p.Append(r);
+                body.Append(p);
             }
 
-            var run = paragraph.AppendChild(new Run());
-            run.AppendChild(new Text($"TemplateGen Generated Document for client: {profile.Metadata.ClientName}"));
-            
-            // 2. Apply Page Setup (SectionProperties) matches 'document' settings
+             // 4. Page Setup & Document Settings (SectionProperties) matches 'document' settings
+             // Note: SectionProperties usually goes at the END of the body (for the last section)
             if (profile.Document != null)
             {
                  var sectionProps = new SectionProperties();
@@ -60,9 +78,9 @@ public class WordGeneratorService
                  if (!string.IsNullOrEmpty(profile.Document.PageSize))
                  {
                      // Approximate A4 size in twips (11906W x 16838H) for Portrait
-                     // For PoC we assume A4 if string matches, else default
                      var pageSize = new PageSize() { Width = 11906, Height = 16838 };
-                     if (profile.Document.Orientation?.ToLower() == "landscape")
+                     
+                     if ("landscape".Equals(profile.Document.Orientation, StringComparison.OrdinalIgnoreCase))
                      {
                          pageSize.Orient = PageOrientationValues.Landscape;
                          // Swap width/height
@@ -78,11 +96,11 @@ public class WordGeneratorService
                      {
                          Top = profile.Document.Margins.Top,
                          Bottom = profile.Document.Margins.Bottom,
-                         Left = (uint)Math.Max(0, profile.Document.Margins.Left),
-                         Right = (uint)Math.Max(0, profile.Document.Margins.Right),
-                         Header = 708, // defaults
-                         Footer = 708,
-                         Gutter = 0
+                         Left = (UInt32Value)(uint)profile.Document.Margins.Left,
+                         Right = (UInt32Value)(uint)profile.Document.Margins.Right,
+                         Header = (UInt32Value)708U, // defaults
+                         Footer = (UInt32Value)708U,
+                         Gutter = (UInt32Value)0U
                      };
                      sectionProps.Append(margins);
                  }

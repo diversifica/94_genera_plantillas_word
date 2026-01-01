@@ -6,7 +6,8 @@ public record TemplateProfile(
     [property: JsonPropertyName("schema_version")] string SchemaVersion,
     [property: JsonPropertyName("metadata")] ProfileMetadata Metadata,
     [property: JsonPropertyName("document")] DocumentSettings? Document,
-    [property: JsonPropertyName("styles")] StylesConfig? Styles
+    [property: JsonPropertyName("styles")] StylesConfig? Styles,
+    [property: JsonPropertyName("numbering")] NumberingConfig? Numbering
 );
 
 public record ProfileMetadata(

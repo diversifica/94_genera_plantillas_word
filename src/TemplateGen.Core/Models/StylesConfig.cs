@@ -29,7 +29,8 @@ public record RunPropertiesConfig(
 public record ParagraphPropertiesConfig(
     [property: JsonPropertyName("alignment")] string? Alignment,
     [property: JsonPropertyName("spacing_after_twips")] int? SpacingAfter,
-    [property: JsonPropertyName("line_spacing")] LineSpacingConfig? LineSpacing
+    [property: JsonPropertyName("line_spacing")] LineSpacingConfig? LineSpacing,
+    [property: JsonPropertyName("indentation")] IndentationConfig? Indentation
 );
 
 public record LineSpacingConfig(
