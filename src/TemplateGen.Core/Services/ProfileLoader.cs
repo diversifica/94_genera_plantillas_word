@@ -76,6 +76,10 @@ public class ProfileLoader
         if (profile == null)
              throw new InvalidOperationException("Failed to deserialize profile (result was null).");
 
+        // Perform semantic validation after deserialization
+        var semanticValidator = new SemanticValidator();
+        validationErrors.AddRange(semanticValidator.Validate(profile));
+
         return (profile, validationErrors);
     }
     

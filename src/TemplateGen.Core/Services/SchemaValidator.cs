@@ -47,7 +47,7 @@ public class SchemaValidator
 
         if (result.Details == null)
         {
-             return new[] { new ValidationError("$", "Unknown validation error") };
+             return new[] { new ValidationError("error", "$", "Unknown validation error") };
         }
 
         // Map JsonSchema.Net errors to our ValidationError DTO
@@ -71,7 +71,7 @@ public class SchemaValidator
                          var path = item.InstanceLocation.ToString();
                          // The dictionary key is the keyword that failed (e.g. "type", "required")
                          // The value is the error message.
-                         errors.Add(new ValidationError(path, $"{error.Key}: {error.Value}"));
+                         errors.Add(new ValidationError("error", path, $"{error.Key}: {error.Value}"));
                      }
                 }
                 

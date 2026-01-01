@@ -1,9 +1,7 @@
 namespace TemplateGen.Core.Models;
 
 public record ValidationError(
+    string Severity,
     string JsonPath,
     string Message
-)
-{
-    public string Severity { get; init; } = "Error"; // Default to Error
-}
+);
