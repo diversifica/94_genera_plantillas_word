@@ -10,6 +10,8 @@ using TemplateGen.Core.Models;
 
 public class ProfileLoader
 {
+    private const string SUPPORTED_SCHEMA_VERSION = "1.0.0";
+    
     private static readonly JsonSerializerOptions _jsonOptions = new()
     {
         PropertyNameCaseInsensitive = true,
@@ -76,6 +78,9 @@ public class ProfileLoader
         if (profile == null)
              throw new InvalidOperationException("Failed to deserialize profile (result was null).");
 
+        // Validate schema version
+        ValidateSchemaVersion(profile);
+
         // Perform semantic validation after deserialization
         var semanticValidator = new SemanticValidator();
         validationErrors.AddRange(semanticValidator.Validate(profile));
@@ -95,5 +100,22 @@ public class ProfileLoader
             // Let's assume this method assumes "no validator" or "ignore errors" unless configured.
         }
         return profile;
+    }
+
+    private void ValidateSchemaVersion(TemplateProfile profile)
+    {
+        if (string.IsNullOrEmpty(profile.SchemaVersion))
+        {
+            throw new InvalidOperationException(
+                "Profile schema version is missing. All profiles must specify a schema_version.");
+        }
+
+        if (profile.SchemaVersion != SUPPORTED_SCHEMA_VERSION)
+        {
+            throw new InvalidOperationException(
+                $"Unsupported schema version: {profile.SchemaVersion}. " +
+                $"This version of TemplateGen supports schema version {SUPPORTED_SCHEMA_VERSION}. " +
+                $"Please update your profile or use a compatible version of TemplateGen.");
+        }
     }
 }
