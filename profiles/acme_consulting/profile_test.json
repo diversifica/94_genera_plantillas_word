@@ -93,7 +93,8 @@
             "font_role": "headings",
             "font_size_points": 18,
             "bold": true,
-            "underline": "single"
+            "underline": "single",
+            "color": "FF0000"
           },
           "paragraph": {
             "alignment": "left",

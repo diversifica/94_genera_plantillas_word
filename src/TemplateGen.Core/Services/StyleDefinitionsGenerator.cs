@@ -113,6 +113,12 @@ public class StyleDefinitionsGenerator
                     rPr.Append(underline);
                 }
             }
+
+            // Color support
+            if (!string.IsNullOrEmpty(rConfig.Color))
+            {
+                rPr.Append(new Color() { Val = rConfig.Color });
+            }
             
             if (rConfig.FontSizeMembers.HasValue) 
             {
