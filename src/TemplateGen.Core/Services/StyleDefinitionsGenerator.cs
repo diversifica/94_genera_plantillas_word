@@ -92,7 +92,7 @@ public class StyleDefinitionsGenerator
             if (rConfig.Italic == true) rPr.Append(new Italic());
             
             // Underline support
-            if (!string.IsNullOrEmpty(rConfig.Underline))
+            if (!string.IsNullOrEmpty(rConfig.Underline) && rConfig.Underline.ToLower() != "none")
             {
                 var underline = new Underline();
                 switch (rConfig.Underline.ToLower())
@@ -102,9 +102,6 @@ public class StyleDefinitionsGenerator
                         break;
                     case "double":
                         underline.Val = UnderlineValues.Double;
-                        break;
-                    case "none":
-                        underline.Val = UnderlineValues.None;
                         break;
                     default:
                         underline.Val = UnderlineValues.Single;
