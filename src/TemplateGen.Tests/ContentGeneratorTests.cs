@@ -110,5 +110,88 @@ namespace TemplateGen.Tests
                 }
             }
         }
+        [Fact]
+        public void GenerateContent_AddsTable()
+        {
+            // Arrange
+            var content = new DocumentContent("doc1", "en", new List<SectionContent>
+            {
+                new SectionContent("s1", new List<ContentElement>
+                {
+                    new TableElement(new List<TableRowElement>
+                    {
+                        new TableRowElement(new List<TableCellElement>
+                        {
+                            new TableCellElement(new List<ContentElement>
+                            {
+                                new ParagraphElement("Normal", "Cell Text")
+                            })
+                        })
+                    })
+                })
+            });
+
+            using (var doc = WordprocessingDocument.Create(_testFile, WordprocessingDocumentType.Document))
+            {
+                var mainPart = doc.AddMainDocumentPart();
+                mainPart.Document = new Document(new Body());
+                
+                var service = new ContentGeneratorService();
+
+                // Act
+                service.GenerateContent(mainPart, content);
+                mainPart.Document.Save();
+            }
+
+            // Assert
+            using (var doc = WordprocessingDocument.Open(_testFile, false))
+            {
+                var body = doc.MainDocumentPart.Document.Body;
+                var table = body.Elements<Table>().FirstOrDefault();
+                
+                Assert.NotNull(table);
+                var row = table.Elements<TableRow>().FirstOrDefault();
+                Assert.NotNull(row);
+                var cell = row.Elements<TableCell>().FirstOrDefault();
+                Assert.NotNull(cell);
+                var p = cell.Elements<Paragraph>().FirstOrDefault();
+                Assert.NotNull(p);
+                Assert.Equal("Cell Text", p.InnerText);
+            }
+        }
+
+        [Fact]
+        public void GenerateContent_AddsMissingImagePlaceholder()
+        {
+            // Arrange
+            var content = new DocumentContent("doc1", "en", new List<SectionContent>
+            {
+                new SectionContent("s1", new List<ContentElement>
+                {
+                    new ImageElement("non_existent_image.png", 100, 100, "Alt")
+                })
+            });
+
+            using (var doc = WordprocessingDocument.Create(_testFile, WordprocessingDocumentType.Document))
+            {
+                var mainPart = doc.AddMainDocumentPart();
+                mainPart.Document = new Document(new Body());
+                
+                var service = new ContentGeneratorService();
+
+                // Act
+                service.GenerateContent(mainPart, content);
+                mainPart.Document.Save();
+            }
+
+            // Assert
+            using (var doc = WordprocessingDocument.Open(_testFile, false))
+            {
+                var body = doc.MainDocumentPart.Document.Body;
+                var p = body.Elements<Paragraph>().FirstOrDefault();
+                Assert.NotNull(p);
+                Assert.Contains("[MISSING IMAGE", p.InnerText);
+            }
+        }
     }
 }

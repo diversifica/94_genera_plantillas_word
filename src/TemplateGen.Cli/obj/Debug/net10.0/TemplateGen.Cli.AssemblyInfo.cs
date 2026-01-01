@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TemplateGen.Cli")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7b25d19f6e90b6fb0b72a4b27763ae73cb7aa81e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eaf759c320c71df13e5e8edabaf1d595e6ccb9d9")]
 [assembly: System.Reflection.AssemblyProductAttribute("TemplateGen.Cli")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TemplateGen.Cli")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
