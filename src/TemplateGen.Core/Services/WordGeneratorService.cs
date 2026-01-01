@@ -21,7 +21,7 @@ public class WordGeneratorService
 
     public void Generate(TemplateProfile profile, string outputPath, DocumentContent? content = null)
     {
-        _logger.LogInformation("Starting document generation for output: {OutputPath}", outputPath);
+        _logger.LogInformation("Starting template generation for output: {OutputPath}", outputPath);
         if (profile == null) throw new ArgumentNullException(nameof(profile));
         if (string.IsNullOrWhiteSpace(outputPath)) throw new ArgumentException("Output path cannot be empty", nameof(outputPath));
 
@@ -32,7 +32,7 @@ public class WordGeneratorService
             Directory.CreateDirectory(directory);
         }
 
-        using (var document = WordprocessingDocument.Create(outputPath, WordprocessingDocumentType.Document))
+        using (var document = WordprocessingDocument.Create(outputPath, WordprocessingDocumentType.Template))
         {
             // Create MainDocumentPart
             var mainPart = document.AddMainDocumentPart();
