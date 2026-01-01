@@ -90,6 +90,29 @@ public class StyleDefinitionsGenerator
 
             if (rConfig.Bold == true) rPr.Append(new Bold());
             if (rConfig.Italic == true) rPr.Append(new Italic());
+            
+            // Underline support
+            if (!string.IsNullOrEmpty(rConfig.Underline))
+            {
+                var underline = new Underline();
+                switch (rConfig.Underline.ToLower())
+                {
+                    case "single":
+                        underline.Val = UnderlineValues.Single;
+                        break;
+                    case "double":
+                        underline.Val = UnderlineValues.Double;
+                        break;
+                    case "none":
+                        underline.Val = UnderlineValues.None;
+                        break;
+                    default:
+                        underline.Val = UnderlineValues.Single;
+                        break;
+                }
+                rPr.Append(underline);
+            }
+            
             if (rConfig.FontSizeMembers.HasValue) 
             {
                  // OpenXML Size is in half-points. So 11pt = 22
