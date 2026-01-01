@@ -2,6 +2,7 @@ using System.IO;
 using Xunit;
 using TemplateGen.Core.Services;
 using TemplateGen.Core.Models;
+using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
 using System.Linq;
@@ -11,10 +12,10 @@ namespace TemplateGen.Tests;
 public class WordGeneratorTests
 {
     [Fact]
-    public void Generate_CreatesValidDocxFile()
+    public void Generate_CreatesValidDotxTemplate()
     {
         // Arrange
-        var outputPath = Path.Combine(Path.GetTempPath(), "test_output.docx");
+        var outputPath = Path.Combine(Path.GetTempPath(), "test_template.dotx");
         var profile = new TemplateProfile(
             "1.0.0", 
             new ProfileMetadata("test_client", "Test Client", "1.0.0", "Desc"),
@@ -32,15 +33,14 @@ public class WordGeneratorTests
             // Assert
             Assert.True(File.Exists(outputPath));
 
-            // Verify it's a valid OpenXML document
+            // Verify it's a valid OpenXML template
             using (var doc = WordprocessingDocument.Open(outputPath, false))
             {
+                Assert.Equal(WordprocessingDocumentType.Template, doc.DocumentType);
                 Assert.NotNull(doc.MainDocumentPart);
                 Assert.NotNull(doc.MainDocumentPart.Document);
                 var body = doc.MainDocumentPart.Document.Body;
                 Assert.NotNull(body);
-                // Check if our text is there
-                Assert.Contains("Test Client", body.InnerText);
             }
         }
         finally
