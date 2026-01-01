@@ -1,0 +1,38 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Template Profile",
+    "type": "object",
+    "properties": {
+        "schema_version": {
+            "type": "string",
+            "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "metadata": {
+            "type": "object",
+            "properties": {
+                "client_id": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "client_name": {
+                    "type": "string"
+                },
+                "profile_version": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "client_id",
+                "client_name",
+                "profile_version"
+            ]
+        }
+    },
+    "required": [
+        "schema_version",
+        "metadata"
+    ]
+}

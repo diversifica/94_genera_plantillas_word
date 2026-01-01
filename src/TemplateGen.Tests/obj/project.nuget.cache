@@ -1,10 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "GHWRMxsl4bQ=",
+  "dgSpecHash": "mQkG9uCErgQ=",
   "success": true,
   "projectFilePath": "E:\\94_genera_plantillas_word\\src\\TemplateGen.Tests\\TemplateGen.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\diver\\.nuget\\packages\\coverlet.collector\\6.0.4\\coverlet.collector.6.0.4.nupkg.sha512",
+    "C:\\Users\\diver\\.nuget\\packages\\humanizer.core\\3.0.1\\humanizer.core.3.0.1.nupkg.sha512",
+    "C:\\Users\\diver\\.nuget\\packages\\json.more.net\\2.2.0\\json.more.net.2.2.0.nupkg.sha512",
+    "C:\\Users\\diver\\.nuget\\packages\\jsonpointer.net\\6.0.1\\jsonpointer.net.6.0.1.nupkg.sha512",
+    "C:\\Users\\diver\\.nuget\\packages\\jsonschema.net\\8.0.5\\jsonschema.net.8.0.5.nupkg.sha512",
     "C:\\Users\\diver\\.nuget\\packages\\microsoft.codecoverage\\17.14.1\\microsoft.codecoverage.17.14.1.nupkg.sha512",
     "C:\\Users\\diver\\.nuget\\packages\\microsoft.net.test.sdk\\17.14.1\\microsoft.net.test.sdk.17.14.1.nupkg.sha512",
     "C:\\Users\\diver\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.14.1\\microsoft.testplatform.objectmodel.17.14.1.nupkg.sha512",

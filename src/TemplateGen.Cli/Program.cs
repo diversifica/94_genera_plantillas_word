@@ -2,7 +2,9 @@
 using System.CommandLine;
 using System.IO;
 using System.Threading.Tasks;
+using System.Linq;
 using TemplateGen.Core.Services;
+
 
 namespace TemplateGen.Cli;
 
@@ -48,11 +50,45 @@ class Program
     {
         try
         {
-            Console.WriteLine($"TemplateGen (Phase 1)");
+            Console.WriteLine($"TemplateGen (Phase 2)");
             Console.WriteLine($"Loading profile: {profileFile.FullName}");
 
-            var loader = new ProfileLoader();
-            var profile = await loader.LoadAsync(profileFile.FullName);
+            // Locate schema (POC: assumes running from repo root or adjacent folders)
+            // Ideally we'd bundle this or allow configuration.
+            var schemaPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "schemas", "template-profile.schema.json");
+            // Fix for running via dotnet run from root
+            if (!File.Exists(schemaPath))
+            {
+                var repoRootSchema = Path.Combine(Directory.GetCurrentDirectory(), "schemas", "template-profile.schema.json");
+                if (File.Exists(repoRootSchema)) schemaPath = repoRootSchema;
+            }
+
+            SchemaValidator? validator = null;
+            if (File.Exists(schemaPath))
+            {
+               Console.WriteLine($"Schema found: {schemaPath}");
+               validator = new SchemaValidator(schemaPath);
+            }
+            else
+            {
+                Console.WriteLine("WARNING: Schema file not found. Validation skipped.");
+            }
+
+            var loader = new ProfileLoader(validator);
+            var (profile, validationErrors) = await loader.LoadWithValidationAsync(profileFile.FullName);
+            
+            var hasErrors = validationErrors.Any();
+
+            if (hasErrors)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("Validation Issues Found:");
+                foreach (var error in validationErrors)
+                {
+                    Console.WriteLine($" - [{error.Severity}] {error.JsonPath}: {error.Message}");
+                }
+                Console.ResetColor();
+            }
 
             Console.WriteLine("--------------------------------------------------");
             Console.WriteLine($"Profile Loaded Successfully");
@@ -66,6 +102,27 @@ class Program
             {
                 if (!outputDir.Exists) outputDir.Create();
                 Console.WriteLine($"Output directory prepared: {outputDir.FullName}");
+                
+                // Generate report.json
+                var reportPath = Path.Combine(outputDir.FullName, "report.json");
+                var report = new 
+                {
+                    GeneratedAt = DateTime.UtcNow,
+                    Profile = profileFile.Name,
+                    IsValid = !hasErrors,
+                    ValidationErrors = validationErrors
+                };
+                
+                await File.WriteAllTextAsync(reportPath, System.Text.Json.JsonSerializer.Serialize(report, new System.Text.Json.JsonSerializerOptions { WriteIndented = true }));
+                Console.WriteLine($"Report generated: {reportPath}");
+            }
+
+            if (strict && hasErrors)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Strict mode enabled: Exiting due to validation errors.");
+                Console.ResetColor();
+                Environment.Exit(1);
             }
         }
         catch (Exception ex)

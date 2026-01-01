@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TemplateGen.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7aed6f4d4ebdc681177b488fbc7dab2ad0dabe7c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4b3c87e7592d8f576677f9a71e0bb037209451d5")]
 [assembly: System.Reflection.AssemblyProductAttribute("TemplateGen.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TemplateGen.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
