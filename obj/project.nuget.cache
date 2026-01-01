@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "H6hnkAcBNfU=",
+  "dgSpecHash": "3i0PHOpik1c=",
   "success": false,
   "projectFilePath": "E:\\94_genera_plantillas_word\\ManualVerify.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,8 @@
     "C:\\Users\\diver\\.nuget\\packages\\json.more.net\\2.2.0\\json.more.net.2.2.0.nupkg.sha512",
     "C:\\Users\\diver\\.nuget\\packages\\jsonpointer.net\\6.0.1\\jsonpointer.net.6.0.1.nupkg.sha512",
     "C:\\Users\\diver\\.nuget\\packages\\jsonschema.net\\8.0.5\\jsonschema.net.8.0.5.nupkg.sha512",
+    "C:\\Users\\diver\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.1\\microsoft.extensions.dependencyinjection.abstractions.10.0.1.nupkg.sha512",
+    "C:\\Users\\diver\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\10.0.1\\microsoft.extensions.logging.abstractions.10.0.1.nupkg.sha512",
     "C:\\Users\\diver\\.nuget\\packages\\system.io.packaging\\8.0.0\\system.io.packaging.8.0.0.nupkg.sha512"
   ],
   "logs": [

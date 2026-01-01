@@ -9,6 +9,7 @@
   <ItemGroup>
     <PackageReference Include="DocumentFormat.OpenXml" Version="3.3.0" />
     <PackageReference Include="JsonSchema.Net" Version="8.0.5" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.1" />
   </ItemGroup>
 
 </Project>
