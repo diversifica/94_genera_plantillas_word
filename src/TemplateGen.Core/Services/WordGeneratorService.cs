@@ -32,7 +32,12 @@ public class WordGeneratorService
             Directory.CreateDirectory(directory);
         }
 
-        using (var document = WordprocessingDocument.Create(outputPath, WordprocessingDocumentType.Template))
+        // Determine document type based on extension
+        var documentType = Path.GetExtension(outputPath).Equals(".docx", StringComparison.OrdinalIgnoreCase) 
+            ? WordprocessingDocumentType.Document 
+            : WordprocessingDocumentType.Template;
+
+        using (var document = WordprocessingDocument.Create(outputPath, documentType))
         {
             // Create MainDocumentPart
             var mainPart = document.AddMainDocumentPart();

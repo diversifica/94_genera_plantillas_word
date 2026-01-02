@@ -1,0 +1,83 @@
+{
+    "elements": [
+        {
+            "type": "heading",
+            "text": "Informe Ejecutivo: Estrategia 2026",
+            "level": 1,
+            "style_id": "Heading1"
+        },
+        {
+            "type": "paragraph",
+            "text": "Este documento presenta la estrategia consolidada para el próximo ejercicio fiscal.",
+            "style_id": "Normal"
+        },
+        {
+            "type": "heading",
+            "text": "Objetivos Principales",
+            "level": 2,
+            "style_id": "Heading2"
+        },
+        {
+            "type": "paragraph",
+            "text": "A continuación se detallan los pilares fundamentales del plan:",
+            "style_id": "Normal"
+        },
+        {
+            "type": "list",
+            "items": [
+                "Expansión internacional en mercados emergentes.",
+                "Optimización operativa mediante IA.",
+                "Sostenibilidad y reducción de huella de carbono."
+            ],
+            "style_id": "BulletList"
+        },
+        {
+            "type": "heading",
+            "text": "Análisis Financiero",
+            "level": 2,
+            "style_id": "Heading2"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Trimestre",
+                "Ingresos (M€)",
+                "Beneficio (M€)"
+            ],
+            "rows": [
+                [
+                    "Q1",
+                    "12.5",
+                    "3.2"
+                ],
+                [
+                    "Q2",
+                    "14.2",
+                    "3.8"
+                ],
+                [
+                    "Q3",
+                    "11.8",
+                    "2.9"
+                ],
+                [
+                    "Q4",
+                    "15.0",
+                    "4.1"
+                ]
+            ],
+            "style_id": "TableGrid"
+        },
+        {
+            "type": "heading",
+            "text": "Conclusiones",
+            "level": 3,
+            "style_id": "Heading3"
+        },
+        {
+            "type": "paragraph",
+            "text": "El panorama es positivo y se proyecta un crecimiento sostenido del 15% anual.",
+            "style_id": "Normal"
+        }
+    ]
+}
